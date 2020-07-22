@@ -30,7 +30,7 @@ public class Teacher extends Person {
     }
 
     public String introduceWith(Student student){
-        if (this.klass != null) {
+        if (this.klass != null && student.getKlass().getNumber() == this.getKlass().getNumber()) {
             return super.introduce().concat(String.format(" I am a Teacher. I teach %s.", student.getName()));
 
         } else {
